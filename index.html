@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Last Lecture</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game">
+
+        <h1>The Last Lecture</h1>
+
+        <!-- CLASSROOM -->
+        <div id="classroom">
+
+            <p>
+                You stayed late at college to finish your assignment.
+                The building is completely empty now...
+            </p>
+
+            <button onclick="findClue()">
+                🔎 Search the classroom
+            </button>
+
+            <button onclick="tryExit()">
+                🚪 Try the exit
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+
+        <!-- CORRIDOR -->
+        <div id="corridor" style="display: none;">
+
+            <h2>🌑 The College Corridor</h2>
+
+            <p>
+                The classroom door opens slowly...
+                The corridor is completely dark.
+            </p>
+
+            <button onclick="searchCorridor()">
+                🔎 Search the corridor
+            </button>
+
+            <button onclick="enterLibrary()">
+                📚 Enter the library
+            </button>
+
+            <p id="corridorMessage"></p>
+
+        </div>
+
+
+        <!-- LIBRARY -->
+        <div id="library" style="display: none;">
+
+            <h2>📚 The Silent Library</h2>
+
+            <p>
+                You enter the library.
+                The lights suddenly go out...
+                An old book is lying on the table.
+            </p>
+
+            <button onclick="searchLibrary()">
+                🔎 Search the library
+            </button>
+
+            <button onclick="finalKey()">
+                🔑 Search the old book
+            </button>
+
+            <button onclick="checkDoor()">
+                🚪 Check the library door
+            </button>
+
+            <p id="libraryMessage"></p>
+
+        </div>
+
+
+        <!-- FINAL GATE -->
+        <div id="gate" style="display: none;">
+
+            <h2>🚪 The Main Gate</h2>
+
+            <p>
+                You found an old key.
+                The college gate is right in front of you.
+            </p>
+
+            <button onclick="escape()">
+                🔓 Use the key
+            </button>
+
+            <p id="gateMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- JUMPSCARE -->
+    <div id="jumpscare" style="display: none;">
+
+        <div>👻</div>
+
+        <h2>DON'T TURN AROUND...</h2>
+
+        <p>Something is standing behind you.</p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
